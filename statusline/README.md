@@ -10,8 +10,8 @@ myrepo | 🌿 (main) | 🔥 ████████████░░░ 78% | 
 
 ## Files
 
-- `statusline.sh` — bash version. macOS, Linux, or WSL. Needs `bash`, `jq`, `git`.
-- `statusline.py` — Python version, same output, no `jq` needed. Cross-platform: macOS,
+- `statusline.sh`: bash version. macOS, Linux, or WSL. Needs `bash`, `jq`, `git`.
+- `statusline.py`: Python version, same output, no `jq` needed. Cross-platform on macOS,
   Linux, and Windows without WSL. Needs Python 3 and `git` on PATH.
 
 Both render the identical line. Pick bash if you live in a shell; pick Python for a single
