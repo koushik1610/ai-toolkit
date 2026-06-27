@@ -8,37 +8,46 @@ REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CLAUDE_DIR="${HOME}/.claude"
 SETTINGS="${CLAUDE_DIR}/settings.json"
 GLOBAL_MD="${CLAUDE_DIR}/CLAUDE.md"
-HOOK="${REPO}/hooks/stop-memory-reminder.sh"
 
 echo "ai-toolkit uninstall"
 
-# Remove skill symlinks that point into this repo.
-for dir in "${REPO}"/skills/*/; do
-  name="$(basename "$dir")"
-  target="${CLAUDE_DIR}/skills/${name}"
-  if [ -L "$target" ] && [ "$(readlink "$target")" = "${dir%/}" ]; then
+unlink_from() {  # remove symlinks in $2 that point into $1/*
+  local srcroot="$1" dstdir="$2" name target
+  for src in "$srcroot"/*; do
+    name="$(basename "$src")"
+    target="${dstdir}/${name}"
+    if [ -L "$target" ] && [ "$(readlink "$target")" = "${src%/}" ]; then
+      rm -f "$target"; echo "  unlink $target"
+    fi
+  done
+}
+
+unlink_from "${REPO}/skills"   "${CLAUDE_DIR}/skills"
+unlink_from "${REPO}/commands" "${CLAUDE_DIR}/commands"
+unlink_from "${REPO}/agents"   "${CLAUDE_DIR}/agents"
+unlink_from "${REPO}/hooks"    "${CLAUDE_DIR}/hooks"
+
+# Statusline scripts live directly in ~/.claude/ (not a subdir).
+for s in statusline.sh statusline.ps1; do
+  target="${CLAUDE_DIR}/${s}"
+  if [ -L "$target" ] && [ "$(readlink "$target")" = "${REPO}/statusline/${s}" ]; then
     rm -f "$target"; echo "  unlink $target"
   fi
 done
 
-# Remove command symlinks that point into this repo.
-for cmd in "${REPO}"/commands/*.md; do
-  name="$(basename "$cmd")"
-  target="${CLAUDE_DIR}/commands/${name}"
-  if [ -L "$target" ] && [ "$(readlink "$target")" = "$cmd" ]; then
-    rm -f "$target"; echo "  unlink $target"
-  fi
-done
-
-# Remove the Stop hook entry.
+# Remove our hook entries (Stop + PreToolUse) by command path.
 if command -v jq >/dev/null 2>&1 && [ -f "$SETTINGS" ]; then
-  tmp="$(mktemp)"
-  jq --arg cmd "$HOOK" '
-    if .hooks.Stop then
-      .hooks.Stop |= map( .hooks |= map(select(.command != $cmd)) ) | .hooks.Stop |= map(select((.hooks | length) > 0))
-    else . end
-  ' "$SETTINGS" > "$tmp" && mv "$tmp" "$SETTINGS"
-  echo "  removed Stop hook entry"
+  for cmd in "${CLAUDE_DIR}/hooks/stop-memory-reminder.sh" "${CLAUDE_DIR}/hooks/pretooluse-guard.sh"; do
+    tmp="$(mktemp)"
+    jq --arg cmd "$cmd" '
+      if .hooks then
+        .hooks |= with_entries(
+          .value |= ( map( .hooks |= map(select(.command != $cmd)) ) | map(select((.hooks | length) > 0)) )
+        )
+      else . end
+    ' "$SETTINGS" > "$tmp" && mv "$tmp" "$SETTINGS"
+  done
+  echo "  removed Stop + PreToolUse hook entries"
 fi
 
 # Remove the ai-deslop import block from global CLAUDE.md.

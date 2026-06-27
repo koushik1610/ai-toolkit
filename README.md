@@ -13,9 +13,12 @@ The repo is the source of truth; `install.sh` symlinks the skills and commands i
 | **skills/ai-deslop/** | Removes AI-generated tells from prose (no em-dashes, no corporate filler, no chatbot tone). On-demand skill + always-on rules imported into the global `CLAUDE.md`. |
 | **skills/llm-council/** | Configurable multi-persona review council. Lite (3 personas) / full (9–10 + anonymous voting), with priority / disposition / score verdicts. Personas are a composable library. |
 | **skills/*-council/** | `security-council`, `portfolio-design-council`, `portfolio-resume-council` — thin wrappers that run the llm-council engine with a preset. |
-| **commands/bootstrap.md** | `/bootstrap` — scaffolds a new project from an archetype using the convention above. |
-| **hooks/** | `stop-memory-reminder.sh` — Stop hook that nudges memory updates when a session involved fixes or decisions. |
+| **commands/** | `/bootstrap` (scaffold a project), `/council` (convene the council, save the verdict), `/deslop` (clean a file or diff). |
+| **agents/** | Curated subagents: `security-reviewer`, `simplifier`. |
+| **hooks/** | `stop-memory-reminder` (nudge memory updates), `pretooluse-guard` (block destructive commands + secrets), `sessionstart-context` (load recent memory + git state), `posttooluse-format` (auto-format by extension, opt-in). |
 | **archetypes/** | Bootstrap presets: `generic`, `startup-rag`, `mcp-server`, `single-tool`, `web-frontend`. |
+| **statusline/** | One-line truecolor status bar (repo, branch, context bar, 5h/weekly limits, velocity, model, cost). `statusline.sh` for bash; `statusline.ps1` PowerShell port for Windows without WSL. |
+| **tests/** | `bats` tests for install/uninstall/doctor and the guard; `shellcheck` in CI. |
 
 ## Install
 
@@ -26,8 +29,13 @@ cd ~/Code/ai-toolkit
 ```
 
 `install.sh` is idempotent and backs up anything real it would replace (into
-`~/.claude/.ai-toolkit-backups/`). `./uninstall.sh` reverses it. Requires `jq` for the
-settings.json merge (falls back to printing manual instructions).
+`~/.claude/.ai-toolkit-backups/`). Use `./install.sh --dry-run` to preview, `./doctor.sh` to
+check health, and `./uninstall.sh` to reverse it. Requires `jq` for the settings.json merge
+(falls back to printing manual instructions).
+
+Installing wires two **global** hooks: a `Stop` memory nudge and a `PreToolUse` guard that
+blocks destructive commands and obvious secrets. Bypass the guard for one call with
+`AI_TOOLKIT_GUARD=off`. It's a speed bump, not a replacement for git pre-commit secret scanning.
 
 ## The council, briefly
 

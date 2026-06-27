@@ -9,16 +9,30 @@
     "deny": []
   },
   "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          { "type": "command", "command": "$HOME/.claude/hooks/sessionstart-context.sh" }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          { "type": "command", "command": "$HOME/.claude/hooks/pretooluse-guard.sh" }
+        ]
+      }
+    ],
     "Stop": [
       {
         "matcher": "",
         "hooks": [
-          {
-            "type": "command",
-            "command": "$HOME/.claude/hooks/stop-memory-reminder.sh"
-          }
+          { "type": "command", "command": "$HOME/.claude/hooks/stop-memory-reminder.sh" }
         ]
       }
     ]
-  }
+  },
+  "_comment_posttooluse": "Opt in to auto-format by adding a PostToolUse hook calling $HOME/.claude/hooks/posttooluse-format.sh with matcher 'Write|Edit' — enabled by the web-frontend / mcp-server / startup-rag archetypes."
 }
