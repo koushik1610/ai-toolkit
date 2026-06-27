@@ -1,0 +1,41 @@
+# {{PROJECT_NAME}}
+
+> Routing file. Keep under 150 lines. Detail lives in `.claude/rules/`, `WORKFLOW.md`, and `docs/`.
+
+## 1. What this is
+
+{{ONE_PARAGRAPH_PURPOSE}}
+
+- **Users:** see [WORKFLOW.md](WORKFLOW.md) for personas and journeys.
+- **Owners:** {{OWNERS}}
+- **Status:** {{PHASE}}
+
+## 2. Stack
+
+{{STACK}}
+
+## 3. Hard rules
+
+State the *why*. Prefer negatives ("never X, because Y").
+
+1. {{RULE_1}}
+2. {{RULE_2}}
+3. ...
+
+## 4. Where things live
+
+- Architecture & deep design → [docs/](docs/)
+- Focused specs (auto-loaded) → `.claude/rules/`
+  - @.claude/rules/auto-update-memory.md
+  - @.claude/rules/memory-profile.md
+  - @.claude/rules/memory-preferences.md
+  - @.claude/rules/memory-decisions.md
+  - @.claude/rules/memory-sessions.md
+  - {{DOMAIN_RULES}}  <!-- e.g. @.claude/rules/security.md -->
+- Slash commands → `.claude/commands/`
+- Subagents → `.claude/agents/`
+- Project skills → `.claude/skills/`
+
+## 5. What "done" looks like
+
+{{VERIFICATION_GATE}}  <!-- e.g. tests pass, build green, app runs and responds -->
