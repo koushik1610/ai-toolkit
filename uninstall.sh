@@ -28,7 +28,7 @@ unlink_from "${REPO}/agents"   "${CLAUDE_DIR}/agents"
 unlink_from "${REPO}/hooks"    "${CLAUDE_DIR}/hooks"
 
 # Statusline scripts live directly in ~/.claude/ (not a subdir).
-for s in statusline.sh statusline.ps1; do
+for s in statusline.sh statusline.py; do
   target="${CLAUDE_DIR}/${s}"
   if [ -L "$target" ] && [ "$(readlink "$target")" = "${REPO}/statusline/${s}" ]; then
     rm -f "$target"; echo "  unlink $target"

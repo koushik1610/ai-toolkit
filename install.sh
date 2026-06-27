@@ -96,10 +96,11 @@ echo "Hooks:"
 for h in "${REPO}"/hooks/*.sh; do link "$h" "${CLAUDE_DIR}/hooks/$(basename "$h")"; done
 
 echo "Statusline (linked, not auto-wired):"
-for s in "${REPO}"/statusline/statusline.sh "${REPO}"/statusline/statusline.ps1; do
+for s in "${REPO}"/statusline/statusline.sh "${REPO}"/statusline/statusline.py; do
   [ -e "$s" ] && link "$s" "${CLAUDE_DIR}/$(basename "$s")"
 done
-echo "  to enable: set settings.json statusLine.command to 'bash $HOME/.claude/statusline.sh'"
+echo "  to enable, set settings.json statusLine.command to one of:"
+echo "    bash $HOME/.claude/statusline.sh   |   python3 $HOME/.claude/statusline.py"
 
 echo "Retiring superseded project-scoped councils (if present):"
 for legacy in "${HOME}/Code/.claude/skills/portfolio-design-council" \

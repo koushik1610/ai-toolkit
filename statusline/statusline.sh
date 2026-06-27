@@ -8,6 +8,7 @@ used_pct=$(echo "$input" | jq -r '.context_window.used_percentage // 0')
 cost=$(echo "$input"     | jq -r '.cost.total_cost_usd // 0')
 added=$(echo "$input"    | jq -r '.cost.total_lines_added // 0')
 removed=$(echo "$input"  | jq -r '.cost.total_lines_removed // 0')
+dur_ms=$(echo "$input"   | jq -r '.cost.total_duration_ms // 0')
 five_pct=$(echo "$input"    | jq -r '.rate_limits.five_hour.used_percentage // empty')
 five_resets=$(echo "$input" | jq -r '.rate_limits.five_hour.resets_at // empty')
 week_pct=$(echo "$input"    | jq -r '.rate_limits.seven_day.used_percentage // empty')
@@ -31,6 +32,7 @@ YELLOW=$(fg 220 200 0)
 GREEN=$(fg 0 200 80)
 RED=$(fg 220 40 20)
 MAGENTA=$(fg 200 0 200)
+CYAN=$(fg 0 180 200)
 DIM=$(fg 100 100 100)
 PIPE="${DIM} | ${RESET}"
 
@@ -86,6 +88,10 @@ elif [ "$pct_int" -ge 20 ]; then emoji="⚡"
 else                             emoji="🟢"
 fi
 
+# --- code velocity (lines changed per minute of session) --------------------
+velocity=$(awk -v a="$added" -v r="$removed" -v d="$dur_ms" \
+  'BEGIN{ if(d>0){ printf "%d", (a+r)/(d/60000)+0.5 } else { print 0 } }')
+
 # --- assemble ---------------------------------------------------------------
 out="$(bfg 220 200 0)${repo}${RESET}"
 [ -n "$branch" ] && out="${out}${PIPE}$(bfg 0 180 200)🌿 (${branch})${RESET}"
@@ -103,6 +109,7 @@ if [ -n "$week_pct" ]; then
   out="${out}${PIPE}${DIM}7d${RESET} $(gradient_bar "$week_pct" 10) $(pct_color "$week_pct")${wp}%${RESET}${reset}"
 fi
 
+[ "$velocity" -gt 0 ] 2>/dev/null && out="${out}${PIPE}${CYAN}⚡${velocity} ln/m${RESET}"
 out="${out}${PIPE}${GREEN}+${added}${RESET} ${RED}-${removed}${RESET}"
 out="${out}${PIPE}${MAGENTA}🤖 ${model}${RESET}"
 out="${out}${PIPE}${YELLOW}\$$(printf '%.2f' "$cost")${RESET}"

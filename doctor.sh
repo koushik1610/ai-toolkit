@@ -58,7 +58,7 @@ else
 fi
 
 echo "Statusline:"
-for s in statusline.sh statusline.ps1; do
+for s in statusline.sh statusline.py; do
   target="${CLAUDE_DIR}/${s}"
   if [ -L "$target" ] && [ "$(readlink "$target")" = "${REPO}/statusline/${s}" ]; then
     ok "$target"

@@ -26,5 +26,5 @@
     `hooks/` into `~/.claude/`.
 
 - `statusline/`: one-line truecolor status bar (repo, branch, 20-block context bar, 5h and
-  weekly rate-limit bars, code velocity, model, cost). `statusline.sh` (bash) plus a
-  `statusline.ps1` PowerShell port for Windows without WSL.
+  weekly rate-limit bars, code velocity, model, cost). `statusline.sh` (bash) and
+  `statusline.py` (Python, cross-platform, no `jq` dependency).

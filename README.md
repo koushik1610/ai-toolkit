@@ -17,8 +17,8 @@ The repo is the source of truth; `install.sh` symlinks the skills and commands i
 | **agents/** | Curated subagents: `security-reviewer`, `simplifier`. |
 | **hooks/** | `stop-memory-reminder` (nudge memory updates), `pretooluse-guard` (block destructive commands + secrets), `sessionstart-context` (load recent memory + git state), `posttooluse-format` (auto-format by extension, opt-in). |
 | **archetypes/** | Bootstrap presets: `generic`, `startup-rag`, `mcp-server`, `single-tool`, `web-frontend`. |
-| **statusline/** | One-line truecolor status bar (repo, branch, context bar, 5h/weekly limits, velocity, model, cost). `statusline.sh` for bash; `statusline.ps1` PowerShell port for Windows without WSL. |
-| **tests/** | `bats` tests for install/uninstall/doctor and the guard; `shellcheck` in CI. |
+| **statusline/** | One-line truecolor status bar (repo, branch, context bar, 5h/weekly limits, velocity, model, cost). `statusline.sh` (bash) and `statusline.py` (Python, cross-platform, no `jq`). |
+| **tests/** | `bats` tests for install/uninstall/doctor, the guard, and the statusline; `shellcheck` + Python compile in CI. |
 
 ## Install
 
