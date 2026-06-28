@@ -12,13 +12,13 @@ of truth; `install.sh` symlinks `skills/`, `commands/`, `agents/`, and `hooks/` 
 
 ## 2. Layout
 
-- `conventions/` — the project-structure standard + templates.
-- `skills/` — `ai-deslop`, the `llm-council` engine + persona library + council configs, and
+- `conventions/`: the project-structure standard + templates.
+- `skills/`: `ai-deslop`, the `llm-council` engine + persona library + council configs, and
   the thin council wrappers.
-- `commands/` — `/bootstrap`, `/council`, `/deslop`.
-- `agents/` — curated subagents (`security-reviewer`, `simplifier`).
-- `hooks/` — Stop, PreToolUse guard, SessionStart, PostToolUse format.
-- `install.sh` / `uninstall.sh` / `doctor.sh` — symlink lifecycle. `tests/` — bats + shellcheck.
+- `commands/`: `/bootstrap`, `/council`, `/deslop`.
+- `agents/`: curated subagents (`security-reviewer`, `simplifier`).
+- `hooks/`: Stop, PreToolUse guard, SessionStart, PostToolUse format.
+- `install.sh` / `uninstall.sh` / `doctor.sh`: symlink lifecycle. `tests/`, bats + shellcheck.
 
 ## 3. Hard rules
 

@@ -10,7 +10,7 @@ over-abstraction.
 - Secrets in env, never in code or logs.
 
 **Extra rule files (into .claude/rules/):**
-- `lessons-learned.md` — running list of gotchas specific to this tool.
+- `lessons-learned.md`: running list of gotchas specific to this tool.
 
 **Settings additions:** allow the run command and the test runner.
 

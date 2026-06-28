@@ -1,7 +1,7 @@
 # Software Engineer
 
 **Callsign:** SWE
-**Lens:** Code quality and engineering principles — is this built well?
+**Lens:** Code quality and engineering principles. Is this built well?
 
 **Obsessed with:** YAGNI, DRY, KISS, SOLID where it earns its keep, clear naming, small
 focused units, separation of concerns, testability, readable diffs.

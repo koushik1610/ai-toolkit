@@ -11,11 +11,11 @@ are all configurable. Existing councils (`security-council`, `portfolio-design-c
 `portfolio-resume-council`) are thin wrappers that call this engine with a preset config.
 
 Read these companion files as needed:
-- [modes.md](modes.md) — lite vs full, how personas are chosen
-- [voting.md](voting.md) — the anonymous peer-vote protocol
-- [verdicts.md](verdicts.md) — priority / disposition / score output formats
-- [personas/](personas/) — the reusable persona library, one file per persona
-- [councils/](councils/) — preset council configs
+- [modes.md](modes.md): lite vs full, how personas are chosen
+- [voting.md](voting.md): the anonymous peer-vote protocol
+- [verdicts.md](verdicts.md): priority / disposition / score output formats
+- [personas/](personas/): the reusable persona library, one file per persona
+- [councils/](councils/): preset council configs
 
 ## Inputs
 
@@ -33,7 +33,7 @@ project") plus, optionally:
 
 Follow these steps in order. Announce the chosen mode, personas, and verdict format up front.
 
-### Step 1 — Resolve the configuration
+### Step 1: Resolve the configuration
 
 1. If a council preset is given, load `councils/<name>.md`. It specifies personas, mode
    default, verdict format, gates, and any mandatory personas. Its instructions win.
@@ -47,24 +47,24 @@ Follow these steps in order. Announce the chosen mode, personas, and verdict for
 3. Pick the **verdict format** ([verdicts.md](verdicts.md)): `priority` (P0/P1/P2) is the
    default for general review; presets may force `disposition` or `score`.
 
-### Step 2 — Phase 1: Independent analysis
+### Step 2: Phase 1: Independent analysis
 
 Spawn the personas to analyze the input **in isolation** (no cross-talk). For full mode,
 group personas and dispatch parallel agents (one agent embodies a group, scores/assesses
-each member separately) — this is how the preset councils run. For lite mode, a single pass
+each member separately): this is how the preset councils run. For lite mode, a single pass
 embodying the 3 personas is fine.
 
 Each persona, in its own voice and lens (from its `personas/*.md` file), produces findings
 in the configured verdict format. A persona only raises what falls in its lens.
 
-### Step 3 — Phase 2: Anonymous peer vote (full mode, if voting on)
+### Step 3: Phase 2: Anonymous peer vote (full mode, if voting on)
 
 Strip persona identities; present each finding as "Finding A, B, C…". Each persona reviews
 all findings and votes per [voting.md](voting.md): HOLD or UPDATE their own position, and
 rank others' findings by importance. Votes are aggregated to reprioritize. Lite mode and
 `--no-vote` skip this step.
 
-### Step 4 — Phase 3: Synthesis
+### Step 4: Phase 3: Synthesis
 
 The Chairman (synthesis role, not a voting persona) produces the final report in the
 configured verdict format:
@@ -73,7 +73,7 @@ configured verdict format:
 - **score:** per-member 0–100, group composites, final composite, gate check.
 
 Always include a **dissenting view** (the strongest minority position), even on consensus.
-Apply any **hard gates** from the preset — these cannot be overridden by vote.
+Apply any **hard gates** from the preset: these cannot be overridden by vote.
 
 ## Guardrails
 

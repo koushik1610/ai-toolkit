@@ -1,5 +1,5 @@
 #!/bin/bash
-# PostToolUse format hook — auto-formats the file Claude just wrote, by extension.
+# PostToolUse format hook: auto-formats the file Claude just wrote, by extension.
 # Opt-in per project (wired by archetypes that need it). Best-effort: if the formatter
 # isn't installed, it does nothing. Never blocks (PostToolUse runs after the tool).
 #

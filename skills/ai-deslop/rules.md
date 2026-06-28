@@ -33,14 +33,14 @@ realm, landscape (figurative), ecosystem (figurative), bustling, testament, navi
 (figurative), embark, journey (figurative), game-changer, cutting-edge, state-of-the-art,
 best-in-class, supercharge, turbocharge, paradigm, holistic, synergy, vibrant.
 
-Not absolute bans — but each occurrence should justify itself. Default to the plain word.
+Not absolute bans, but each occurrence should justify itself. Default to the plain word.
 
 ## Tone & rhythm
 
 - **Vary sentence length.** AI writes medium-medium-medium. Mix short punches with longer
   lines. A three-word sentence is allowed.
 - Cut hedging stacks: "it's worth noting that", "it's important to remember that",
-  "generally speaking", "in many cases" — usually deletable.
+  "generally speaking", "in many cases", usually deletable.
 - No false precision or invented confidence. If unsure, say so plainly.
 - Prefer concrete nouns and verbs over abstractions. Show the thing, don't gesture at it.
 - Don't over-explain the obvious or pad to hit a length.

@@ -10,8 +10,8 @@ A Next.js / React frontend or portfolio (modeled on the koushik.io portfolio).
 - WCAG AA: contrast, keyboard flows, visible focus states.
 
 **Extra rule files (into .claude/rules/):**
-- `design-system.md` — tokens, typography, spacing scale, motion rules.
-- `code-style.md` — component structure, file organization.
+- `design-system.md`: tokens, typography, spacing scale, motion rules.
+- `code-style.md`: component structure, file organization.
 
 **Settings additions:** allow `npm run`, the dev server, and Playwright.
 

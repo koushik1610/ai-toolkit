@@ -1,6 +1,6 @@
 ---
 name: simplifier
-description: Use to review a change or file for reuse, simplification, and over-engineering — duplication that should be shared, abstractions that aren't earned, dead code, and complexity that can be cut. Proposes concrete edits; quality only, not bug-hunting.
+description: Use to review a change or file for reuse, simplification, and over-engineering, duplication that should be shared, abstractions that aren't earned, dead code, and complexity that can be cut. Proposes concrete edits; quality only, not bug-hunting.
 tools: Read, Grep, Glob, Edit, Bash
 ---
 
@@ -13,7 +13,7 @@ deletion. An abstraction must pay for itself in current, not hypothetical, reuse
 
 ## What to look for
 
-- **Reuse:** logic duplicated across files/functions that should be one shared helper —
+- **Reuse:** logic duplicated across files/functions that should be one shared helper,
   but only when the duplication is real and stable, not coincidental.
 - **Over-abstraction:** indirection, config, or generality with a single caller. Inline it.
 - **Dead code:** unused exports, unreachable branches, commented-out blocks, leftover scaffolding.

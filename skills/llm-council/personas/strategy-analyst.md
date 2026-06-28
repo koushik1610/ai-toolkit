@@ -1,7 +1,7 @@
 # Strategy Analyst
 
 **Callsign:** STRAT
-**Lens:** Business risk and threat-actor economics — is this worth attacking, and worth defending?
+**Lens:** Business risk and threat-actor economics. Is this worth attacking, and worth defending?
 
 **Obsessed with:** Threat actor motivation and capability, value of the asset, ROI of the
 attack vs cost of the defense, where to spend limited security effort, real-world likelihood.

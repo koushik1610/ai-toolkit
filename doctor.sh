@@ -1,5 +1,5 @@
 #!/bin/bash
-# doctor.sh — verify the ai-toolkit install is healthy. Read-only; changes nothing.
+# doctor.sh: verify the ai-toolkit install is healthy. Read-only; changes nothing.
 # Checks every expected symlink resolves into this repo, hooks are wired, and the
 # ai-deslop import is present. Exits non-zero if anything is off so CI/you can catch drift.
 
@@ -73,5 +73,5 @@ for h in "${REPO}/hooks/"*.sh; do
 done
 
 echo ""
-if [ "$FAIL" = 0 ]; then echo "All checks passed."; else echo "Some checks FAILED — run ./install.sh to repair."; fi
+if [ "$FAIL" = 0 ]; then echo "All checks passed."; else echo "Some checks FAILED: run ./install.sh to repair."; fi
 exit "$FAIL"

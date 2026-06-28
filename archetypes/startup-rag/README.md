@@ -11,9 +11,9 @@ retrieved documents, PII, and a need for review gates.
   prompt construction.
 
 **Extra rule files (into .claude/rules/):**
-- `security.md` — trust boundaries, secret handling, the hard-deny gate items.
-- `ai-security.md` — prompt-injection, RAG-poisoning, output-handling rules.
-- `compliance.md` — DPDP / sector confidentiality, retention, audit.
+- `security.md`: trust boundaries, secret handling, the hard-deny gate items.
+- `ai-security.md`: prompt-injection, RAG-poisoning, output-handling rules.
+- `compliance.md`: DPDP / sector confidentiality, retention, audit.
 
 **Settings additions:** allow the project's test/format commands; wire a PostToolUse format
 hook if the stack needs one.

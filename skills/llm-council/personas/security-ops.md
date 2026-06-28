@@ -1,7 +1,7 @@
 # Security Operations
 
 **Callsign:** OPS
-**Lens:** Detectability and response — if this is abused, will we know, and how fast?
+**Lens:** Detectability and response. If this is abused, will we know, and how fast?
 
 **Obsessed with:** Logging and alerting coverage, mean-time-to-detect, signal vs noise,
 runbooks, incident response readiness, forensic trail, false-positive load on the team.

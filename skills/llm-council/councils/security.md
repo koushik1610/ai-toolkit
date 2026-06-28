@@ -17,7 +17,7 @@ The **Chairman** is the synthesis role (not a voting persona).
 - **Mode default:** full (9 personas, 3 phases). `--quick` runs Phase 1 only, abbreviated.
 - **Verdict format:** `disposition` (APPROVE / CONDITIONAL / REJECT / DEFER + confidence).
   See [../verdicts.md](../verdicts.md) §2.
-- **Voting:** Phase 2 anonymized peer review ([../voting.md](../voting.md)) — HOLD/UPDATE,
+- **Voting:** Phase 2 anonymized peer review ([../voting.md](../voting.md)), HOLD/UPDATE,
   no numeric ranking needed (disposition format).
 - **Confidence:** clamped 55–95%.
 - **Council name in output:** `SECURITY COUNCIL`.
@@ -25,7 +25,7 @@ The **Chairman** is the synthesis role (not a voting persona).
 ## Mandatory personas
 
 - **AI-SEC always speaks** on any change touching the LLM call path, prompt construction, RAG
-  pipeline, or model-output handling — even in `--quick` mode.
+  pipeline, or model-output handling: even in `--quick` mode.
 
 ## Hard deny gate (overrides the vote → REJECT)
 
@@ -39,7 +39,7 @@ If any item triggers, VERDICT = REJECT regardless of council vote.
 
 ## Extra output section
 
-- **ATT&CK / CWE Mapping** — populated when RED or CAT flag anything (CAT owns the mapping).
+- **ATT&CK / CWE Mapping**: populated when RED or CAT flag anything (CAT owns the mapping).
 
 ## When to convene
 

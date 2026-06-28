@@ -1,4 +1,4 @@
-# Memory — Preferences
+# Memory: Preferences
 
 How things are done in this project. Conventions, tooling choices, style. Update as
 preferences are stated or corrected.

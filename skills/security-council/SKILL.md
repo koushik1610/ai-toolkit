@@ -18,7 +18,7 @@ Thin wrapper. This council is an instance of the **llm-council** engine running 
    Phase 1 only (abbreviated), with AI-SEC still mandatory on LLM-touching changes.
 
 The persona definitions live in `llm-council/personas/` (the security callsigns) and the
-output format in `llm-council/verdicts.md` §2. Output is the `SECURITY COUNCIL — FINAL
+output format in `llm-council/verdicts.md` §2. Output is the `SECURITY COUNCIL: FINAL
 VERDICT` block.
 
 ## Inputs

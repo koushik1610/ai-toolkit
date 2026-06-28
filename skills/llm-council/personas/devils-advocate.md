@@ -12,7 +12,7 @@ smell. Will defend the rejected alternative to see if it actually holds up.
 - If this fails badly in a year, what was the cause we're dismissing today?
 - What's the strongest argument for *not* doing this, or doing the opposite?
 - Whose interest does the consensus quietly serve?
-- What evidence would change the council's mind — and do we have it?
+- What evidence would change the council's mind: and do we have it?
 
 **Score rubric (score format only):** scores the *robustness of the decision*: 95+ =
 survives the strongest counter-argument; <80 = consensus is fragile or unexamined.

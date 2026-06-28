@@ -1,21 +1,21 @@
-# ai-toolkit — Workflow & User Stories
+# ai-toolkit: Workflow & User Stories
 
 How the toolkit is used. The "user" is Koushik setting up and working across AI-dev projects.
 
 ## Personas
 
-### Koushik — starting a new project
+### Koushik: starting a new project
 - **Context:** spinning up a new repo and wants it AI-ready from commit one.
 - **Goal:** a standard structure (routing CLAUDE.md, WORKFLOW.md, memory layer, safe hooks)
   without hand-assembling it each time.
 - **Pain today:** every project's CLAUDE.md drifts; no shared convention; setup is manual.
 
-### Koushik — working day to day
+### Koushik: working day to day
 - **Context:** mid-task in any project on the laptop.
 - **Goal:** the same skills, commands, hooks, and agents available everywhere, always current.
 - **Pain today:** tools live in scattered project dirs; updating one doesn't update the rest.
 
-### Koushik — reviewing an ask or a project
+### Koushik: reviewing an ask or a project
 - **Context:** facing a decision, a design, or a finished feature and wants more than one lens.
 - **Goal:** convene a council and get a prioritized P0/P1/P2 (or a security verdict, or a score).
 - **Pain today:** a single pass misses angles; reviews aren't repeatable.
@@ -31,7 +31,7 @@ How the toolkit is used. The "user" is Koushik setting up and working across AI-
 
 ### Journey: install / update the toolkit
 1. Clone or `git pull` ai-toolkit.
-2. `./install.sh` (idempotent) — symlinks everything into `~/.claude`, wires global hooks.
+2. `./install.sh` (idempotent): symlinks everything into `~/.claude`, wires global hooks.
 3. `./doctor.sh` confirms health. Edits to the repo are live immediately (symlinks).
 
 ### Journey: run a review
@@ -52,9 +52,9 @@ How the toolkit is used. The "user" is Koushik setting up and working across AI-
 
 ## Non-goals
 
-- Not a product for other people — no marketplace, no onboarding, no multi-user concerns (v1).
-- Not cross-tool yet — Claude Code only; AGENTS.md alias is the only nod to Cursor/Codex.
-- Not a kitchen sink — breadth is added only when a need is real and recurring.
+- Not a product for other people: no marketplace, no onboarding, no multi-user concerns (v1).
+- Not cross-tool yet: Claude Code only; AGENTS.md alias is the only nod to Cursor/Codex.
+- Not a kitchen sink: breadth is added only when a need is real and recurring.
 
 ## Success metrics
 

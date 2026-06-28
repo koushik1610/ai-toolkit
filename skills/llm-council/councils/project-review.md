@@ -23,9 +23,9 @@ the ask (e.g. `ai-security` if it touches an LLM, `compliance` if regulated data
 
 ## Groups (parallel agents, full mode)
 
-- **Build quality** — software-engineer, systems-engineer, (ai-security if seated)
-- **Security & risk** — cybersecurity, cloud-security, (compliance if seated)
-- **Delivery & reality** — project-manager, pragmatist, realist, devils-advocate
+- **Build quality**: software-engineer, systems-engineer, (ai-security if seated)
+- **Security & risk**: cybersecurity, cloud-security, (compliance if seated)
+- **Delivery & reality**: project-manager, pragmatist, realist, devils-advocate
 
 ## Gate
 

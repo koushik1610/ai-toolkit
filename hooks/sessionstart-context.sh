@@ -1,5 +1,5 @@
 #!/bin/bash
-# SessionStart hook — closes the memory loop the Stop hook starts.
+# SessionStart hook: closes the memory loop the Stop hook starts.
 # Stdout from a SessionStart hook is injected as context, so this surfaces recent project
 # memory and repo state at the top of each session.
 #

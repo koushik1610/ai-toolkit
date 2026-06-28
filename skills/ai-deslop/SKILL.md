@@ -6,7 +6,7 @@ description: Remove AI-generated tells from prose so it doesn't read as machine-
 # ai-deslop
 
 Strip the tells that make writing read as AI-generated. The full ruleset is in
-[rules.md](rules.md) — read it before deslopping.
+[rules.md](rules.md). Read it before deslopping.
 
 ## When to use
 

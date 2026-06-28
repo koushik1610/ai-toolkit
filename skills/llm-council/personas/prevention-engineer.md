@@ -1,7 +1,7 @@
 # Prevention Engineer
 
 **Callsign:** PREV
-**Lens:** Catch it before it ships — code-level patterns and static analysis.
+**Lens:** Catch it before it ships: code-level patterns and static analysis.
 
 **Obsessed with:** SAST-detectable patterns, dangerous sinks, taint flow, linter/guardrail
 coverage, secure coding patterns, where a CI check could have stopped this.

@@ -1,12 +1,12 @@
 #!/bin/bash
-# PreToolUse guard — a speed bump, not a guarantee.
+# PreToolUse guard: a speed bump, not a guarantee.
 # Blocks clearly destructive Bash commands and flags likely secrets in file writes.
 #
 # Protocol: reads the tool-call JSON on stdin. To BLOCK, exit 2 with a reason on stderr
 # (Claude sees it and stops). To allow, exit 0 silently.
 #
 # Bypass for a single call: set AI_TOOLKIT_GUARD=off in the environment.
-# This does NOT replace git pre-commit secret scanning — keep that as the real net.
+# This does NOT replace git pre-commit secret scanning: keep that as the real net.
 
 [ "${AI_TOOLKIT_GUARD:-on}" = "off" ] && exit 0
 

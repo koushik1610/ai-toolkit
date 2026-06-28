@@ -15,9 +15,9 @@ for the llm-council engine. Drives the `portfolio-design-council` wrapper skill.
 
 ## Subject
 
-**Koushik Kotamraju** — Sr. Security Engineer at Yahoo Paranoids. 9 years. Co-founding in stealth.
+**Koushik Kotamraju**: Sr. Security Engineer at Yahoo Paranoids. 9 years. Co-founding in stealth.
 Target: Principal/Staff Security Engineer, FAANG-adjacent, AI-native startups.
-Positioning: "Cloud security engineer building AI-native security platforms — production systems, not prototypes."
+Positioning: "Cloud security engineer building AI-native security platforms, production systems, not prototypes."
 Stack: Next.js 15 App Router, TypeScript, Tailwind CSS, motion/react, Geist Sans + Geist Mono.
 
 ## Groups (parallel agents)
@@ -26,7 +26,7 @@ Stack: Next.js 15 App Router, TypeScript, Tailwind CSS, motion/react, Geist Sans
 - **Engineering** (members 3, 4, 11): architecture, AI-collaboration, code quality
 - **UX + Systems + A11y** (members 5, 7, 8, 9, 10): AI UX, design systems, performance, a11y, conversion
 
-## Members (domain-specific — defined here, not in the shared library)
+## Members (domain-specific: defined here, not in the shared library)
 
 ### 1. AI Product Design Director
 Evaluates overall product quality, clarity, polish, and emotional feel.
@@ -125,7 +125,7 @@ distinctness as a scoring dimension.
 
 ## Distinctness rules
 
-Each theme must use a genuinely different **layout structure** — not just different colors on
+Each theme must use a genuinely different **layout structure**: not just different colors on
 the same layout. When scoring theme plans or built themes, add a **Distinctness Score**
 (0–100) measuring differentiation from all other existing themes. Distinctness counts as
 member 13 in the composite when evaluating a set of themes together.

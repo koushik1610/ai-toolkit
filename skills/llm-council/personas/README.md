@@ -1,6 +1,6 @@
 # Persona library
 
-One file per persona. These are the **reusable** personas — general-purpose lenses plus the
+One file per persona. These are the **reusable** personas: general-purpose lenses plus the
 security callsigns. Domain-specific one-off personas (e.g. the portfolio design/resume
 members) live inline in their `councils/*.md` config instead of here.
 
@@ -10,7 +10,7 @@ members) live inline in their `councils/*.md` config instead of here.
 # {Persona name}
 
 **Callsign:** {SHORT}            <!-- optional, used in disposition output -->
-**Lens:** {one line — the angle this persona reviews from}
+**Lens:** {one line, the angle this persona reviews from}
 
 **Obsessed with:** {what they prioritize / what "good" means to them}
 **Biases:** {what they reflexively distrust or push back on}
@@ -20,7 +20,7 @@ members) live inline in their `councils/*.md` config instead of here.
 
 **Score rubric (score format only):** 95+ = {elite}; 80–94 = {ok}; <80 = {failing}
 **Hard-gate triggers (if any):** {conditions this persona can fire that force a REJECT}
-**Mandatory when:** {optional — when this persona must always be seated}
+**Mandatory when:** {optional, when this persona must always be seated}
 ```
 
 Only `name`, `Lens`, `Obsessed with`, `Biases`, and `Reviews` are required. The rest apply

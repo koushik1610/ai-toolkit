@@ -20,5 +20,5 @@ Thin wrapper. This council is an instance of the **llm-council** engine running 
    its members 0–100 with findings + improvements, then composite and gate-check. On ≥95,
    produce the three deliverables (Resume v1 Impact, Resume v2 Technical Depth, LinkedIn doc).
 
-Output is the `RESUME & CAREER POSITIONING COUNCIL — SCORECARD` block
+Output is the `RESUME & CAREER POSITIONING COUNCIL: SCORECARD` block
 ([llm-council/verdicts.md](../llm-council/verdicts.md) §3).

@@ -4,29 +4,29 @@ A council config picks one. The engine renders the synthesis (Phase 3) in this f
 
 ---
 
-## 1. `priority` — P0 / P1 / P2 (default, general review)
+## 1. `priority`: P0 / P1 / P2 (default, general review)
 
 For reviewing an ask or a whole project. Findings are bucketed by priority and, when voting
 ran, ordered within each bucket by vote weight.
 
 ```
 ═══════════════════════════════════════
-COUNCIL VERDICT — {subject}
+COUNCIL VERDICT: {subject}
 Mode: {lite|full}  ·  Personas: {list}  ·  Voting: {on|off}
 ═══════════════════════════════════════
 
 ── Summary ────────────────────────────
 {2–3 sentences: overall state and the single most important thing to do}
 
-── P0 — must fix / blocking ───────────
-1. {finding} — {why it matters} — {specific action}  [raised by {persona}]
+── P0: must fix / blocking ───────────
+1. {finding}: {why it matters}, {specific action}  [raised by {persona}]
 2. ...
 
-── P1 — should fix ────────────────────
-1. {finding} — {action}  [raised by {persona}]
+── P1: should fix ────────────────────
+1. {finding}: {action}  [raised by {persona}]
 
-── P2 — nice to have ──────────────────
-1. {finding} — {action}
+── P2: nice to have ──────────────────
+1. {finding}: {action}
 
 ── Dissenting view ────────────────────
 {strongest minority position, even if outvoted}
@@ -40,7 +40,7 @@ P0 = correctness/security/blocking; P1 = important but shippable-around; P2 = po
 
 ---
 
-## 2. `disposition` — APPROVE / CONDITIONAL / REJECT / DEFER (security-style)
+## 2. `disposition`: APPROVE / CONDITIONAL / REJECT / DEFER (security-style)
 
 For go/no-go gates. Each persona gives a disposition + confidence; the Chairman synthesizes.
 
@@ -52,7 +52,7 @@ Conditions (if CONDITIONAL): {bullets}
 ```
 
 Dispositions: **APPROVE** (safe as-is), **CONDITIONAL** (approve if conditions met),
-**REJECT** (do not ship), **DEFER** (insufficient info — list what's needed),
+**REJECT** (do not ship), **DEFER** (insufficient info: list what's needed),
 **DEPRECATE** (existing pattern should be removed).
 
 Confidence clamped **55–95%**. Never 100% (human in loop); never below 55% (→ DEFER).
@@ -60,7 +60,7 @@ Confidence clamped **55–95%**. Never 100% (human in loop); never below 55% (�
 Final report:
 ```
 ═══════════════════════════════════════
-{COUNCIL NAME} — FINAL VERDICT
+{COUNCIL NAME}: FINAL VERDICT
 ═══════════════════════════════════════
 Proposal: {title}        Date: {date}
 VERDICT: {APPROVE | CONDITIONAL | REJECT | DEFER}
@@ -70,7 +70,7 @@ Council Confidence: {weighted avg, clamped 55–95}%
 ── Summary ────────────────────────────
 ── Conditions (if CONDITIONAL) ────────  {specific, actionable, verifiable}
 ── Dissenting View ────────────────────  {strongest opposing argument}
-── Hard Deny Gate ─────────────────────  {from config; Gate triggered: YES — reason | NO}
+── Hard Deny Gate ─────────────────────  {from config; Gate triggered: YES, reason | NO}
 ── Mapping (if applicable) ────────────  {MITRE ATT&CK / CWE / etc.}
 ── Required Before Ship ───────────────  {checklist from CONDITIONAL personas + gate}
 ═══════════════════════════════════════
@@ -80,7 +80,7 @@ Hard-deny gate (defined per config) fires REJECT regardless of vote.
 
 ---
 
-## 3. `score` — numeric 0–100 with composite + floor gate (portfolio-style)
+## 3. `score`: numeric 0–100 with composite + floor gate (portfolio-style)
 
 For quality bars where each member scores independently. Run as parallel group agents.
 
@@ -96,7 +96,7 @@ Per group: `Group composite = mean of group member scores.`
 Final:
 ```
 ═══════════════════════════════════════
-{COUNCIL NAME} — SCORECARD
+{COUNCIL NAME}: SCORECARD
 ═══════════════════════════════════════
 {Group 1}: {composite}
 {Group 2}: {composite}
@@ -104,7 +104,7 @@ Final:
 
 FINAL COMPOSITE = mean of all {N} member scores = {value}
 GATE: ≥{composite_min} composite AND no member <{floor}
-RESULT: {PASS | FAIL — {which members/composite missed and by how much}}
+RESULT: {PASS | FAIL, {which members/composite missed and by how much}}
 
 ── Top fixes to clear the gate ────────
 {ordered list of what would move the lowest scores}

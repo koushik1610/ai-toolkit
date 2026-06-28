@@ -15,9 +15,9 @@ config for the llm-council engine. Drives the `portfolio-resume-council` wrapper
 
 ## Subject
 
-**Koushik Kotamraju** — Sr. Security Engineer at Yahoo Paranoids. 9 years total experience.
+**Koushik Kotamraju**: Sr. Security Engineer at Yahoo Paranoids. 9 years total experience.
 Co-founding in stealth. Open to roles: Principal/Staff Security Engineer, FAANG-adjacent, AI-native startups.
-**One-line positioning:** Cloud security engineer building AI-native security platforms — production systems, not prototypes.
+**One-line positioning:** Cloud security engineer building AI-native security platforms, production systems, not prototypes.
 
 ### Key metrics
 - 2,823 cloud accounts secured (4-person team)
@@ -46,7 +46,7 @@ FAANG and FAANG-adjacent (Google, Amazon, Meta, Apple, Microsoft), AI-native sta
 - **Technical + Domain** (members 4, 5, 8, 9, 11): ATS, recruiter scan, security domain, AI security, behavioral
 - **Brand + Positioning + Channels** (members 10, 12, 13, 14): personal brand, resume aesthetics, LinkedIn, portfolio coherence
 
-## Members (domain-specific — defined here, not in the shared library)
+## Members (domain-specific: defined here, not in the shared library)
 
 ### 1. Executive Resume Strategist
 Evaluates overall resume strategy, positioning, and fit for senior IC and lead roles.
@@ -106,7 +106,7 @@ Deep domain expert who validates that security-specific content is technically c
 **Score rubric:** 95+ = clearly a domain expert who builds production systems. 80–94 = competent but some shallow descriptions. <80 = doesn't pass security expert sniff test.
 
 ### 9. AI Security & Innovation Strategist
-Reviews positioning around AI security work — the most differentiating aspect of the profile.
+Reviews positioning around AI security work: the most differentiating aspect of the profile.
 **Obsessed with:** AI security market narrative · LLM security expertise · Novel research framing · Innovation signaling
 **Biases:** Hates vague AI claims · Hates "used AI tools" without substance · Hates underselling genuinely novel work
 **Reviews:** Is the AI security work framed as pioneering, not incremental? · Does the AI pipeline work read as a differentiator for FAANG/AI-native startups? · Is the research framing credible for senior IC roles?
@@ -148,7 +148,7 @@ Reviews how well the portfolio site and projects support the job hunt.
 **Score rubric:** 95+ = portfolio makes the resume even stronger. 80–94 = good but not integrated with resume story. <80 = portfolio doesn't help the job hunt.
 
 ### 15. Executive Communication Coach
-Reviews senior communication quality — the ability to communicate at the level of Principal/Staff IC.
+Reviews senior communication quality: the ability to communicate at the level of Principal/Staff IC.
 **Obsessed with:** Executive clarity · Confidence in language · Appropriate technical abstraction · Absence of hedge language
 **Biases:** Hates weak qualifiers ("tried to", "helped with", "some experience") · Hates over-technical jargon in non-technical sections · Hates underselling significant achievements
 **Reviews:** Does this person communicate like a Principal IC or a mid-level engineer? · Is confidence level appropriate to the experience? · Are achievements framed with executive clarity?
@@ -171,4 +171,4 @@ suggestions. Then group composite = mean of group scores.
 - Secondary: IAM privilege analysis at depth (100% GOAT recall is rare and specific)
 - Frame Yahoo Paranoids work at scale (2,823 accounts, not just "large enterprise")
 - Co-founding context adds entrepreneurial signal without undermining employment
-- Target the "production systems, not prototypes" positioning — distinguishes from researchers
+- Target the "production systems, not prototypes" positioning: distinguishes from researchers

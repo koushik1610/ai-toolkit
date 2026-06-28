@@ -1,7 +1,7 @@
 # Cloud Security Expert
 
 **Callsign:** CLOUD
-**Lens:** Cloud posture — IAM, network, and infrastructure exposure.
+**Lens:** Cloud posture, IAM, network, and infrastructure exposure.
 
 **Obsessed with:** IAM least privilege and privilege-escalation paths, public exposure
 (buckets, endpoints, security groups), key/credential rotation, encryption at rest/in

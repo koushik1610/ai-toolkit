@@ -11,7 +11,7 @@ Claude skims it and misses what matters. So it stays small and points elsewhere.
 ```
 project/
   CLAUDE.md            # <150 lines: identity, stack, hard rules, links out
-  WORKFLOW.md          # user stories — who uses this and how
+  WORKFLOW.md          # user stories: who uses this and how
   AGENTS.md            # thin alias → "read CLAUDE.md"
   docs/                # architecture, deeper specs
   .claude/
@@ -42,10 +42,10 @@ project/
 
 Four rolling files under `.claude/rules/`, auto-loaded every session:
 
-- **memory-profile.md** — durable facts about the project and the people.
-- **memory-preferences.md** — how things are done here (conventions, tooling choices).
-- **memory-decisions.md** — dated decisions, so choices stay consistent over time.
-- **memory-sessions.md** — rolling summary of recent substantive work.
+- **memory-profile.md**: durable facts about the project and the people.
+- **memory-preferences.md**: how things are done here (conventions, tooling choices).
+- **memory-decisions.md**: dated decisions, so choices stay consistent over time.
+- **memory-sessions.md**: rolling summary of recent substantive work.
 
 These are project-scoped. They are **separate** from Claude Code's global native
 auto-memory (`~/.claude/.../memory/MEMORY.md`), which stays the home for facts about

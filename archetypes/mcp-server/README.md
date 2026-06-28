@@ -9,7 +9,7 @@ A Model Context Protocol server (modeled on medium-mcp-server).
 - Each tool validates its inputs and returns structured errors, not exceptions.
 
 **Extra rule files (into .claude/rules/):**
-- `mcp-conventions.md` — tool registration, naming, error shape, session lifecycle.
+- `mcp-conventions.md`: tool registration, naming, error shape, session lifecycle.
 
 **Settings additions:** allow `node`, the test runner, and the MCP inspector command.
 

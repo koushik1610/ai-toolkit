@@ -1,5 +1,5 @@
 #!/bin/bash
-# install.sh — link ai-toolkit into ~/.claude. Idempotent.
+# install.sh: link ai-toolkit into ~/.claude. Idempotent.
 #
 # - Symlinks every skill dir (skills/*) into ~/.claude/skills/
 # - Symlinks every command (commands/*.md) into ~/.claude/commands/
@@ -60,7 +60,7 @@ link() {  # link $1 (source) -> $2 (target)
 wire_hook() {
   local event="$1" cmd="$2"
   if ! command -v jq >/dev/null 2>&1; then
-    echo "  jq not found — add to ${SETTINGS} hooks.${event} manually:"
+    echo "  jq not found: add to ${SETTINGS} hooks.${event} manually:"
     echo "    { \"matcher\": \"\", \"hooks\": [ { \"type\": \"command\", \"command\": \"$cmd\" } ] }"
     return
   fi

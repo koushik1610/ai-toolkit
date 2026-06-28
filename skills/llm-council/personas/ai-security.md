@@ -19,4 +19,4 @@ context as instructions, and tools the model can call without authorization chec
 **Hard-gate triggers:** untrusted external content reaching the prompt without isolation;
 model output flowing to a sensitive sink unchecked.
 **Mandatory when:** the change touches any LLM call path, prompt construction, RAG pipeline,
-or model-output handling — AI-SEC always speaks, even in lite/quick mode.
+or model-output handling. AI-SEC always speaks, even in lite/quick mode.

@@ -9,8 +9,8 @@ council's collective judgment, without anchoring on who said what.
    presents them as a flat list: Finding A, Finding B, Finding C, …
 
 2. **Re-vote on own position.** Each persona reviews the anonymized set and either:
-   - **HOLD** — keeps its original position, or
-   - **UPDATE** — changes it, with a one-sentence reason. Update only on **new information
+   - **HOLD**: keeps its original position, or
+   - **UPDATE**: changes it, with a one-sentence reason. Update only on **new information
      or a better argument**, never on social pressure or perceived majority.
 
 3. **Rank others' findings.** Each persona ranks the findings it did *not* author by
@@ -18,7 +18,7 @@ council's collective judgment, without anchoring on who said what.
 
 4. **Aggregate.** The Chairman tallies the rankings into a vote weight per finding
    (e.g. Borda count: a finding ranked 1st by a persona scores N-1, 2nd scores N-2, …,
-   summed across personas). Disputed flags are noted, not subtracted — dissent is preserved.
+   summed across personas). Disputed flags are noted, not subtracted: dissent is preserved.
 
 ## How votes shape the verdict
 
